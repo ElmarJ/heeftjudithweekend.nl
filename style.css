@@ -1,0 +1,17 @@
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 100px;
+}
+
+span#weekend {
+    color: #00ff00;
+}
+
+span#geen_weekend {
+    color: #ff0000;
+}
+
+.hidden {
+    display: none;
+}
