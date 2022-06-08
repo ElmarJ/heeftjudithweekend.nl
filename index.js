@@ -5,16 +5,17 @@ let weekend = false;
 if (day === 0 || day == 5 || day === 6) {
   weekend = true;
 }
-if (day === 4 && now.getTime() > 17 * 3600 * 100) {
+if (day === 4 && now.getHours() > 17) {
   weekend = true;
 }
 
-if (now > new Date(2022, 5, 28) && now < new Date(2022, 6, 7)) {
+// Note: date constructor month is 0-11, so we need to substract 1
+if (now >= new Date(2022, 4, 28) && now <= new Date(2022, 5, 6)) {
   document.getElementById("vakantie").className = "show";
   document.getElementById("weekend").className = "hidden";
   document.getElementById("geen_weekend").className = "hidden";
 }
-else if (now > new Date(2022, 7, 4) && now < new Date(2022, 7, 18)) {
+else if (now >= new Date(2022, 6, 4) && now <= new Date(2022, 6, 18)) {
   document.getElementById("vakantie").className = "show";
   document.getElementById("weekend").className = "hidden";
   document.getElementById("geen_weekend").className = "hidden";
